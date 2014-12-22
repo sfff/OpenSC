@@ -2020,9 +2020,9 @@ static int write_object(CK_SESSION_HANDLE session)
 		n_pubkey_attr = 3;
 
 		if (opt_is_private != 0) {
-			FILL_ATTR(data_templ[n_data_attr], CKA_PRIVATE,
+			FILL_ATTR(pubkey_templ[n_pubkey_attr], CKA_PRIVATE,
 				&_true, sizeof(_true));
-			n_data_attr++;
+			n_pubkey_attr++;
 		}
 
 		if (opt_object_label != NULL) {
